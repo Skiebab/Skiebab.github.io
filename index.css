@@ -151,3 +151,19 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 800px) {
+    #mapid, #cadre_form {
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    #mapnform {
+        display: block;
+    }
+    #flexblock, #cadre_form {
+        padding: 20px;
+    }
+    #page {
+        height: 100%;
+    }
+  }
