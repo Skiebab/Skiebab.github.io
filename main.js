@@ -62,10 +62,15 @@ btnReserver.addEventListener('click', () => {
         
         if (timerSet == false || termine == true) {
             reserved = true
-            // Enregistrer des données dans sessionStorage
+
+            // Enregistrer des données dans localStorage
             localStorage.setItem('Nom', nom_reservation.value)
             localStorage.setItem('Prénom', prenom_reservation.value)
             console.log(window.localStorage)
+
+            // Enregistrer des données dans sessionStorage
+            sessionStorage.setItem("timerReservation", "setInterval('timeOfUse()',60000)") 
+
             etat_reservation.innerText = `Vélo réservé à l'adresse suivante : ${adresse.innerText.slice(10)} par ${localStorage['Prénom']} ${localStorage['Nom']}`
             timerReservation = setInterval('timeOfUse()',60000)
             temps_restant.innerText = `Temps restant : ${minutes} minute(s)`
