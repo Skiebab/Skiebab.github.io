@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Location Vélo</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="page">
+
+        <div id="cadre_diapo">
+            <h1>Bienvenue sur Lok'Vélib</h1>
+            <p></p>
+            <img id="img" class="diapo" src="bike1.jpg" alt="photo vélo">
+            <div id="suivant"><i class="fas fa-chevron-right"></i></div>
+            <div id="precedent"><i class="fas fa-chevron-left"></i></div>
+            <div id="pause"><i class="fas fa-pause"></i></div>
+            <div id="btnPlay"><i class="fas fa-play"></i></div>
+        </div>
+
+
+        <div id="mapnform">
+
+            <div id="mapid"></div>
+        
+            <div id="cadre_form">
+                <p id="adresse">Adresse :</p>
+                <p id="nbVeloDispo">Vélos disponibles :</p>
+                <form action="">
+                    <input type="text" placeholder="Nom" id="nom_reservation">
+                    <input type="text" placeholder="Prénom" id="prenom_reservation">
+                    <input id="btnReserver" type="button" value="Réserver un vélo">
+                </form>
+            </div>
+
+        </div>
+        
+        <div id="flexblock">
+
+            <hr>
+
+            <div id="etat_reservation">Veuillez réserver un vélo...</div>
+            <div id="temps_restant"></div>
+
+            <hr>
+
+        </div>
+        
+
+    </div>
+
+    <script src="diapo.js"></script>
+    <script src="https://kit.fontawesome.com/18f8e3ba5e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
+    </script>
+    <script src="map.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
