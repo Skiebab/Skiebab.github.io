@@ -1,0 +1,148 @@
+*, body, ::after, ::before {
+    box-sizing: border-box;
+}
+
+#form_container, #page_container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+body {
+    background-color: rgb(255, 255, 255)
+}
+
+#page_container {
+    flex-direction: column;
+    justify-content: space-between;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 95vh;
+    width: 95vw;
+    margin: auto;
+    font-size: 13px;
+}
+
+#bill_name {
+    text-align: center;
+    margin: 2vh 0 4vh 0;
+    width: auto;
+    font-size: 2em;
+}
+
+label {
+    margin: 1vh 0 1vh 0;
+}
+
+#service_provider, #client {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 50vw;
+    text-align: left;
+}
+
+#client {
+    margin-left: 15vw;
+}
+
+table {
+    width: 100%;
+    margin-top: 4vh;
+    border-radius: 5px;
+}
+
+input {
+    background-color: rgba(129, 173, 226, 0.397);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+th, td, table {
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#btn_table, #btn_table2 {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    border-radius: 50%;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.137);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea {
+    background-color: rgba(129, 173, 226, 0.397);
+    min-width: 100%;
+    min-height: 8vh;
+    resize: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    height: 60vh;
+    width: 60vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(101, 137, 170, 0.863);
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+}
+
+.popup>button {
+    width: 20vw;
+    height: 50vh;
+    margin: 1vw;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    border-radius: 5px;
+    background-color: rgba(194, 236, 255, 0.493);
+    font-size: 1.2em;
+    min-height: 60px;
+}
+
+.popup>button:hover {
+    background-color: rgba(186, 227, 246, 0.329);
+    color: white;
+}
+
+#service:hover, .popup>button:hover, #btn_table:hover, #btn_table2:hover {
+    cursor: pointer;
+    background-color: rgba(133, 133, 133, 0.233);
+}
+
+#total_table {
+    margin-bottom: 20px;
+}
+
+tr td input {
+    min-height: 8vh;
+}

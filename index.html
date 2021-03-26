@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partiel JS Thomas Feuga</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="page_container">
+        <input type="text" name="bill_name" id="bill_name" placeholder="Nom de la facture">
+
+        <div id="form_container">
+
+            <form id="service_provider">
+                <label for="enterprise_name">Société/Nom: </label>
+                <input type="text" name="enterprise_name" id="enterprise_name" placeholder="Nom de l'entreprise">
+                <label for="service_address">Adresse: </label>
+                <input type="text" name="service_address" id="service_address" placeholder="Adresse">
+                <label for="service_telephone">Téléphone: </label>
+                <input type="tel" name="service_telephone" id="service_telephone" placeholder="Numéro de téléphone">
+                <label for="siret">SIRET: </label>
+                <input type="number" name="siret" id="siret" placeholder="Numéro de SIRET">
+            </form>
+
+            <form id="client">
+                <label for="client_name">Nom du client: </label>
+                <input type="text" name="client_name" id="client_name" placeholder="Nom du client">
+                <label for="address">Adresse: </label>
+                <input type="text" name="address" id="address" placeholder="Adresse de facturation">
+                <label for="client_telephone">Téléphone: </label>
+                <input type="tel" name="client_telephone" id="client_telephone" placeholder="Numéro de téléphone">
+            </form>
+
+        </div>
+
+        <div id="overflow">
+        <table id="main_table">
+            <thead>
+                <tr>
+                    <th><label for="reference">Référence</label></th>
+                    <th><label for="description">Description</label></th>
+                    <th><label for="quantity">Quantité</label></th>
+                    <th><label for="unity_price">Prix unitaire</label></th>
+                    <th><label for="total">Total</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="reference" id="reference" placeholder="Référence">
+                    </td>
+                    <td>
+                        <textarea name="description" id="description" cols="25" rows="1"></textarea>
+                    </td>
+                    <td>
+                        <input type="number" name="quantity" id="quantity" placeholder="Quantité">
+                    </td>
+                    <td>
+                        <input type="number" name="unity_price" id="unity_price" placeholder="Prix unitaire">
+                    </td>
+                    <td>
+                        <input type="number" name="total1" id="total1" placeholder="Total">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div id="btn_container">
+            <button id="btn_table2">-</button>
+            <button id="service">Ajouter un service</button>
+            <button id="btn_table">+</button>
+        </div>
+
+        <div class="popup">
+            <button id="btn1">Cahier des charges</button>
+            <button id="btn2">Mise en ligne</button>
+            <button id="btn3">Réparer votre imprimante</button>
+        </div>
+
+
+        <table id="total_table">
+            <thead>
+                <tr>
+                    <th><label for="HT_total">Total HT</label></th>
+                    <th><label for="taxes_total">Total Taxes</label></th>
+                    <th><label for="TTC_total">Total TTC</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="number" name="total_HT" id="total_HT" placeholder="Total HT">
+                    </td>
+                    <td>
+                        <input type="number" name="taxes_total" id="taxes_total" placeholder="Total Taxes">
+                    </td>
+                    <td>
+                        <input type="number" name="total_TTC" id="total_TTC" placeholder="Total TTC">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="fillData.js"></script>
+    <script src="fillTable.js"></script>
+    <script src="addlLines.js"></script>
+</body>
+
+</html>
